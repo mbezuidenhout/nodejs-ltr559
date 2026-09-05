@@ -1,7 +1,7 @@
 {
   "name": "@bezuidenhout/ltr559-sensor",
-  "version": "0.1.0",
-  "description": "A Node.js I2C module for the LTR 559 Light and Proximity Sensor.",
+  "version": "0.2.0",
+  "description": "A Node.js I2C module for the LTR559 Light and Proximity Sensor.",
   "main": "LTR559.js",
   "keywords": [
     "LTR559",
@@ -15,14 +15,18 @@
   ],
   "author": "Marius Bezuidenhout",
   "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "i2c-bus": "^5.1.0"
+    "i2c": "^0.4.0"
   },
   "directories": {
     "example": "examples"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test",
+    "test:hardware": "node --test tests/LTR559.hardware.test.js"
   },
   "repository": {
     "type": "git",
